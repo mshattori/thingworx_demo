@@ -20,6 +20,9 @@ class Thing:
             self.post_to_service('AddPropertyDefinition', {'name': 'temperature', 'type': 'NUMBER'})
             self.post_to_service('AddPropertyDefinition', {'name': 'pressure', 'type': 'NUMBER'})
             self.post_to_service('AddPropertyDefinition', {'name': 'humidity', 'type': 'NUMBER'})
+            self.post_to_service('AddPropertyDefinition', {'name': 'sw_yellow', 'type': 'BOOLEAN'})
+            self.post_to_service('AddPropertyDefinition', {'name': 'sw_green', 'type': 'BOOLEAN'})
+            self.post_to_service('AddPropertyDefinition', {'name': 'sw_blue', 'type': 'BOOLEAN'})
             # after changes to a Thing's structure it must be restarted
             self.post_to_service('RestartThing')
         except Exception, e:
